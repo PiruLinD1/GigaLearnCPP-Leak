@@ -35,7 +35,7 @@ RSAPI void Arena::SetMutatorConfig(const MutatorConfig& mutatorConfig) {
 		for (Car* car : _cars) {
 			btVector3 newCarInertia;
 			car->_childHitboxShape.calculateLocalInertia(mutatorConfig.carMass, newCarInertia);
-			car->_rigidBody.setMassProps(mutatorConfig.ballMass, newCarInertia);
+			car->_rigidBody.setMassProps(mutatorConfig.carMass, newCarInertia);
 		}
 	}
 
